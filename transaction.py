@@ -49,7 +49,7 @@ def transaction():
         acc = str(input())
         credit_acc.append(acc)
         sheet[Acc + str(count)] = credit_acc[k]
-        sheet[Acc + str(count)].font = Font(family="Arial", size=10, bold=True)
+        sheet[Acc + str(count)].font = Font(name='Arial', size=10, bold=True)
         amount = float(input("Enter amount: "))
         sheet[Cr + str(count)] = amount
         count += 1
@@ -57,6 +57,6 @@ def transaction():
         if cr > 1 and k < cr:
             print("Enter Credit Account: ")
     sheet[Acc + str(count)] = str(input("Enter Transaction Description: "))
-    sheet[Acc + str(count)].font = Font(family="Arial", size=10, italic=True)
+    sheet[Acc + str(count)].font = Font(name='Arial', size=10, italic=True)
 
     workbook.save(filename="Accounting.xlsx")
